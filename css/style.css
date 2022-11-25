@@ -43,12 +43,13 @@ align-items: center;
 justify-content: center;
 }
 .card-container{
-  width: 25rem;
+  width: 33rem;
   margin: 0 auto;
   background-color: var(--clr-white);
   padding: 2rem;
   border-radius: 10px;
   box-shadow: var(--box-shadow);
+  
 }
 .info-container{
   min-height: 4rem;
@@ -78,6 +79,7 @@ justify-content: center;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1rem;
+  gap: 1rem;
 }
 .btn-weapon{
 width: 5.5rem;

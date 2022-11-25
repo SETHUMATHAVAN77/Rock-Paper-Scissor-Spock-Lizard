@@ -9,13 +9,17 @@ let compScore = 0;
 // using inline js
 // generate a randomNumber
 const getCompChoice = function(){
-  const randomNumber =Math.floor(Math.random() * 3)+1;
+  const randomNumber =Math.floor(Math.random() * 5)+1;
   if(randomNumber === 1){
-    return 'rock'
+    return 'rock';
   }else if(randomNumber === 2){
-    return 'paper'
+    return 'paper';
   }else if(randomNumber === 3){
-    return 'scissors'
+    return 'scissors';
+  }else if(randomNumber === 4){
+    return 'spock';
+  }else if(randomNumber === 5){
+    return 'lizard';
   }
 };
 // get user choice
@@ -31,7 +35,11 @@ const playGame = function (weapon){
     }else if(result === 'LOST'){
       compScore = compScore + 1;
       
+    }else if(result === 'Draw'){
+      userScore = userScore + 1;
+      compScore = compScore + 1;
     }
+    
     userScoreEl.innerText = userScore;
     compScoreEL.innerText = compScore;
 
@@ -51,6 +59,10 @@ const getResult = function (userChoice, compChoice){
       return 'LOST'
     }else if(compChoice === 'scissors'){
       return 'WON'
+    }else if(compChoice === 'lizard'){
+      return 'WON'
+    }else if(compChoice === 'spock'){
+      return 'LOST'
     }
   }else if(userChoice ==='paper'){
     if(compChoice === 'rock'){
@@ -59,6 +71,10 @@ const getResult = function (userChoice, compChoice){
       return 'DRAW'
     }else if(compChoice === 'scissors'){
       return 'LOST'
+  }else if(compChoice === 'lizard'){
+    return 'LOST'
+  }else if(compChoice === 'spock'){
+    return 'WON'
   }
   }else if(userChoice === 'scissors'){
     if(compChoice === 'rock'){
@@ -66,6 +82,34 @@ const getResult = function (userChoice, compChoice){
     }else if(compChoice === 'paper'){
       return 'WON'
     }else if(compChoice === 'scissors'){
+      return 'DRAW'
+    }else if(compChoice === 'lizard'){
+      return 'WON'
+    }else if(compChoice === 'spock'){
+      return 'LOST'
+    }
+  }else if(userChoice === 'lizard'){
+    if(compChoice === 'rock'){
+      return 'LOST'
+    }else if(compChoice === 'paper'){
+      return 'WON'
+    }else if(compChoice === 'scissors'){
+      return 'LOST'
+    }else if(compChoice === 'lizard'){
+      return 'DRAW'
+    }else if(compChoice === 'spock'){
+      return 'WON'
+    }
+  }else if(userChoice === 'spock'){
+    if(compChoice === 'rock'){
+      return 'WON'
+    }else if(compChoice === 'paper'){
+      return 'LOST'
+    }else if(compChoice === 'scissors'){
+      return 'WON'
+    }else if(compChoice === 'lizard'){
+      return 'LOST'
+    }else if(compChoice === 'spock'){
       return 'DRAW'
     }
   }

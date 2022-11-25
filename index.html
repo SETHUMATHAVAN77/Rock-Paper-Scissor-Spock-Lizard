@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- favicon -->
   <link rel="shortcut icon" href="./images/icons8-downloads-100.png" type="image/x-icon">
-  <title>Static-boilerplate</title>
+  <title>Rock-Paper-Scissors-Lizard-spock</title>
   <!-- fontAwesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- normalize css -->
@@ -21,6 +21,8 @@
         <span>Rock</span>
         <span>Paper</span>
         <span>Scissors</span>
+        <span>Lizard</span>
+        <span>Spock</span>
       </div>
       <div class="score-container">
         <p>user score: <span class="user-score">0</span></p>
@@ -37,6 +39,14 @@
     <button class="btn btn-weapon" onclick="playGame('scissors')">
       <i class="fa-solid fa-hand-scissors"></i>
     </button>
+    <button class="btn btn-weapon" onclick="playGame('lizard')">
+      <i class="fa-sharp fa-solid fa-hand-lizard"></i>
+    </button>
+    <button class="btn btn-weapon" onclick="playGame('spock')">
+      <i class="fa-sharp fa-solid fa-hand-spock"></i>
+    </button>
+    
+
   </div>
   <div class="result-container">
     <p class="user-choice"></p>
